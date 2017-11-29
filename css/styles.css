@@ -1,5 +1,5 @@
 body {
-  /* background-color: red; */
+  background-color: grey;
   font-family: 'Optima', sans-serif;
   margin: 0; 
 }
@@ -38,7 +38,7 @@ nav {
 
 nav ul {
   padding: 1em;
-  background-color: black;
+  background-color: #58D3F7;
   list-style-type: none;
 }
 
@@ -47,14 +47,14 @@ nav li {
 }
 
 nav a {
-  color: white;
+  color: black;
   display: block;
   text-decoration: none;
   padding: .5em;
 }
 
 nav a:hover {
-  background: grey;
+  background: black;
 }
 
 
@@ -67,7 +67,7 @@ a:hover {
 }
 
 footer {
-  background: grey;
+  background: #58D3F7;
   color: white;
   font-size: .5em;
   padding: 1em;
