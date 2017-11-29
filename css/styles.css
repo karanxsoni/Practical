@@ -54,7 +54,10 @@ nav a {
 }
 
 nav a:hover {
-  background: black;
+  background: #58D3F7;
+  font-size: 115%;
+ 
+  
 }
 
 
