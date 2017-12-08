@@ -16,5 +16,31 @@
       toggle = true
     }
   }
+})();  
+  "use strict";
 
-})();
+function initMap() {
+  let leicester = {lat: 52.6333, lng: -1.1333};
+  let mirchmasala = {lat: 52.649804, lng: -1.123713};
+  let nandos = {lat: 52.633354, lng: -1.129596};
+  let mapDemo = document.getElementById("map");
+
+  // this sets the default location for when the map is first loaded
+  let map = new google.maps.Map(mapDemo, {
+    zoom: 12,
+    center: leicester
+  });
+
+  // these set different markers you want to show on your map
+  let markermirchmasala = new google.maps.Marker({
+    position: mirchmasala,
+    map: map,
+    title: 'Mirch Masala'
+  });
+  let markernandos = new google.maps.Marker({
+    position: nandos,
+    map: map,
+    title: 'Nandos'
+  });
+}
+
