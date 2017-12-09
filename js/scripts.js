@@ -44,3 +44,9 @@ function initMap() {
   });
 }
 
+/* pop up contact form */
+
+document.getElementById("submit").addEventListener("click", function(){
+    alert("Thank-you, your message has been sent!");
+});
+

@@ -44,7 +44,7 @@ a {
 .container-1{
       display:flex;
 	  justify-content: space-around;
-	  /* flex-direction:column; */
+	  flex-direction:column;
       align-items:flex-strech;
 	  /*   
       align-items:flex-end;
@@ -58,7 +58,7 @@ a {
     .container-2{
       display:flex;  
 	  justify-content: space-around;
-	/*   flex-direction:column; */
+	flex-direction:column;
       align-items:flex-strech;
 	  
       
@@ -67,7 +67,7 @@ a {
   .container-3{
     display:flex;  
     justify-content: space-around;
-	/* flex-direction:column; */
+	flex-direction:column;
     align-items:flex-strech;
 	
   }
@@ -75,9 +75,9 @@ a {
   .container-1 div, .container-2 div, .container-3 div{
     border:1px #ccc solid;
     padding:10px;
-	/* margin:15px; */
+	margin:15px;
 	height:100%;
-	  width:100%;
+	width:100%;
   }
   
     
@@ -121,7 +121,39 @@ section {
 	 width: 90%;
   }
   
+  /* form */
+  
+  input[type=text], select, textarea {
+    width: 50%; /* Full width */
+    padding: 12px; /* Some padding */  
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 15px; /* Rounded borders */
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 5px; /* Add a top margin */
+    margin-bottom: 15px; /* Bottom margin */
+    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
 
+/* Style the submit button with a specific background color etc */
+#submit{
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+	width: 80px;
+	height: 36px;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+#submit:hover {
+    background-color: #45a049;
+	width: 85px;
+	height: 41px;
+	transition-timing-function: ease-in-out;
+}
+ 
 
 /* FIRST BREAKPOINT (MEDIUM SIZE) */
 @media screen and (min-width: 500px) {
