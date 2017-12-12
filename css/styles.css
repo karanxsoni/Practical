@@ -235,7 +235,7 @@ img:nth-child(4) { animation-delay: 0s; }
 	#soni{
 		stroke-dasharray: 800;
 		stroke-dashoffset: 0;
-		-webkit-animation: dash 2s linear forwards;
+		-webkit-animation: dash 3s linear forwards;
 		
 		
 		/* -webkit-animation: fill 5s infinite; */
@@ -261,7 +261,7 @@ img:nth-child(4) { animation-delay: 0s; }
 			#k{
 			stroke-dasharray: 800;
 			stroke-dashoffset: 0;
-			-webkit-animation: dash 2s linear forwards;
+			-webkit-animation: dash 3s linear forwards;
 			}
 			
 			@-webkit-keyframes dash{
