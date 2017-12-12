@@ -225,6 +225,60 @@ img:nth-child(2) { animation-delay: 8s; }
 img:nth-child(3) { animation-delay: 4s; }
 img:nth-child(4) { animation-delay: 0s; }
  
+ 
+ /* svg logo animation */
+
+  svg{ width: 300px;}
+ 
+
+.st0{fill:none;stroke:#000000;stroke-miterlimit:10;}
+	#soni{
+		stroke-dasharray: 800;
+		stroke-dashoffset: 0;
+		-webkit-animation: dash 2s linear forwards;
+		
+		
+		/* -webkit-animation: fill 5s infinite; */
+		}
+		
+	/* @-webkit-keyframes fill {
+		to {
+			fill: red;
+		}
+		
+	} */
+			
+	@-webkit-keyframes dash{
+		from{
+			stroke-dashoffset: 800;
+			}
+		to{
+			stroke-dashoffset: 0;
+			background: red;
+		}
+	}
+			
+			#k{
+			stroke-dasharray: 800;
+			stroke-dashoffset: 0;
+			-webkit-animation: dash 2s linear forwards;
+			}
+			
+			@-webkit-keyframes dash{
+				from{
+					stroke-dashoffset: 800;
+					}
+				to{
+					stroke-dashoffset: 0;
+					}
+			}
+			
+			#logo:hover .st0 {
+				fill: #000;
+				transition: 1.5s;
+			}
+			
+	
 
 /* FIRST BREAKPOINT (MEDIUM SIZE) */
 @media screen and (min-width: 500px) {
