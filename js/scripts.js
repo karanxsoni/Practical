@@ -17,7 +17,8 @@
     }
   }
 })();  
-  "use strict";
+
+
 
 function initMap() {
   let leicester = {lat: 52.6333, lng: -1.1333};
