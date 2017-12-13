@@ -1,9 +1,70 @@
 /* GLOBAL AND MOBILE STYLES FIRST */
 
+.background {
+	width: 100%;
+  height: 700px;
+  position: relative;
+  background: -webkit-linear-gradient(top, rgb(161,219,255) 0%,rgb(203,235,255) 53%,rgb(240,249,255) 100%); /* Chrome10+,Safari5.1+ */
+  background-size: 100% 100%;
+}
+
+.clouds {
+  width: 150px;
+  height: 250px;
+  position: absolute;
+}
+
+.cloud1 {
+	top: 80px;
+  z-index: 0;
+  fill: #eee;
+  /* Animation shorthand syntax order: name, duration, timing-function, delay, iteration-count, direction, fill-mode */
+  -webkit-animation: move 25s linear infinite;
+  -moz-animation: move 25s linear infinite;
+  -o-animation: move 25s linear infinite;
+  animation: move 25s linear infinite;
+}
+
+.cloud2 {
+	top: 5px;
+  z-index: 1;
+  fill: #eee;
+  -webkit-animation: move 35s linear 9s infinite backwards;
+  -moz-animation: move 35s linear 9s infinite backwards;
+  -o-animation: move 35s linear 9s infinite backwards;
+  animation: move 35s linear 9s infinite backwards;
+}
+
+.cloud3 {
+	top: 300px;
+  z-index: 3;
+  fill: #eee;
+  -webkit-animation: move 40s linear 13s infinite backwards;
+  -moz-animation: move 40s linear 13s infinite backwards;
+  -o-animation: move 40s linear 13s infinite backwards;
+  animation: move 40s linear 13s infinite backwards;
+}
+
+
+.cloud4 {
+	top: 150px;
+	z-index: 0;
+  fill: #eee;
+  -webkit-animation: move 30s linear 4s infinite backwards;
+  -moz-animation: move 30s linear 4s infinite backwards;
+  -o-animation: move 30s linear 4s infinite backwards;
+  animation: move 30s linear 4s infinite backwards;
+}
+
+@-webkit-keyframes move {
+  from {-webkit-transform: translateX(-400px);}
+  to {-webkit-transform: translateX(1350px);}
+}
+
 body {
   margin:0;
   padding:0;
-  background: #e0ebeb;
+  background-image: white;
   /* text-align: center; */
    /* display: block;
   height: 1000px; */
@@ -23,7 +84,7 @@ p {
 }
 
 main {
-  background: #909090;
+  background: none;
   padding: .5em;
   display: block;
   height: 1000px;
@@ -278,7 +339,35 @@ img:nth-child(4) { animation-delay: 0s; }
 				transition: 1.5s;
 			}
 			
-	
+.moveme {
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  width: 20px;
+  height: 20px;
+  padding: 0 1em;
+ /*  margin: 10em; */
+  background-color: black;
+  animation-name: movingBox;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+  transform-origin:  10px 10px;
+}
+
+@keyframes movingBox {
+  0%   { background-color:black; left: 0px; top: 0px;
+			width: 20px;
+		height: 20px;
+		}
+  
+  100% { background-color: #f15a24; left: 0px; top: 0px;
+		width: 40px;
+		height: 40px;
+		}
+}	
 
 /* FIRST BREAKPOINT (MEDIUM SIZE) */
 @media screen and (min-width: 500px) {
