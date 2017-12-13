@@ -1,5 +1,7 @@
 /* GLOBAL AND MOBILE STYLES FIRST */
 
+/* cloud background */
+
 .background {
 	width: 100%;
   height: 700px;
@@ -12,6 +14,7 @@
   width: 150px;
   height: 250px;
   position: absolute;
+  overflow: hidden;
 }
 
 .cloud1 {
@@ -61,10 +64,12 @@
   to {-webkit-transform: translateX(1250px);}
 }
 
+
+
 body {
-  margin:0;
-  padding:0;
-  background-image: white;
+  margin:20px;
+  padding:10px;
+  background: white;
   /* text-align: center; */
    /* display: block;
   height: 1000px; */
@@ -72,10 +77,12 @@ body {
   scroll-behavior: smooth;
   
 }
-h1 {
+h1, h2, h3 {
   font-size: 1.5em;
   margin: 0;
   padding: 1em;
+  font-family: helvetica;
+  text-align: center
 }
 
 p {
@@ -84,7 +91,8 @@ p {
 }
 
 main {
-  background: none;
+  background: white;
+  margin: 10px;
   padding: .5em;
   display: block;
   height: 1000px;
@@ -152,18 +160,22 @@ a {
       display:flex;  
 	  justify-content: center;
 	flex-direction:column;
-      align-items:flex-strech;
+      align-items:center;
 	  height: 450px;
 	  width: auto;
-	  
-      
+	       
+  }
+  
+  .box-2.2{
+	margin: 30px;
+	padding: 30px;
   }
   
 .container-3{
     display:flex;  
     justify-content: center;
 	flex-direction:column;
-    align-items:flex-strech;
+    align-items:center;
 	height: auto;
 	width: auto;
 
@@ -180,11 +192,12 @@ a {
 	}
   
   .container-1 div, .container-2 div, .container-3 div{
-    border:1px #ccc solid;
+    /* border:1px #ccc solid; */
     padding:10px;
-	margin:25px;
+	/* margin:25px; */
 	height:100%;
 	width:100%;
+	justify-content: center;
   }
   
 .container-4 div{
