@@ -11,6 +11,27 @@
   overflow: hidden;
 }
 
+.testimg {
+	width: 150px;
+	position: relative;
+	/* cursor: pointer; */
+	-webkit-transition: 0.3s ease-in-out;
+	-webkit-transform 0.3s ease-in-out;
+	-moz-transition:0.3s ease-in-out, -moz-transform 0.3s ease-in-out;
+	transition:0.3s ease-in-out;
+	transform 0.3s ease-in-out;
+		}
+
+.testimg:hover {
+	transform: scale (1.2);
+}
+		
+		.testimg:hover {
+	transform: scale (1.2);
+}
+		
+		
+		
 .clouds {
   width: 75px;
   height: 125px;
@@ -102,6 +123,7 @@ body {
   scroll-behavior: smooth;
   text-align: center;
   
+  
 }
 h1, h2, h3 {
   font-size: 1.5em;
@@ -116,7 +138,7 @@ p {
 	font-family: verdana
 }
 
-main {
+/* main {
   background: white;
   margin: 10px;
   padding: .5em;
@@ -124,7 +146,7 @@ main {
   height: 1000px;
   overflow-y: scroll;
   scroll-behavior: smooth;
-}
+} */
 /* section {
   background: red;
 } */
@@ -176,6 +198,7 @@ a {
     align-items:center;
 	height: 650px;
 	width: auto;
+	position:relative;
 
 	  /*   
       align-items:flex-end;
@@ -191,23 +214,27 @@ a {
 	  justify-content: center;
 	flex-direction:column;
       align-items:center;
-	  height: 450px;
+	  height: auto;
 	  width: auto;
+	  position:relative;
 	       
   }
   
   .box-2.2{
 	margin: 30px;
 	padding: 30px;
+	position:relative;
   }
   
 .container-3{
     display:flex;  
+	flex-wrap: wrap;
     justify-content: center;
 	flex-direction:column;
-    align-items:center;
+    align-items:flex -end;
 	height: auto;
 	width: auto;
+	position:relative;
 
 	}
 	
@@ -218,6 +245,7 @@ a {
     align-items:flex-strech;
 	height: auto;
 	width: auto;
+	/* position:relative; */
 
 	}
   
@@ -228,6 +256,7 @@ a {
 	height:100%;
 	width:100%;
 	justify-content: center;
+	position: relative;
 	
   }
   
@@ -238,6 +267,7 @@ a {
 	margin:15px;
 	height:auto;
 	width:auto;
+	position: relative;
   }
   
   .box-4.1 {
@@ -245,17 +275,49 @@ a {
     justify-content: center;
 	/* flex-direction:column; */
     align-items:flex-strech; 
+	position: relative;
+	
 	    }
 		
 	.box-4.1 div{
 		margin: 20px;
 		padding:20px;
+		position: relative;
 		
 	}
 		
-
+  .box-3.1 {
+	 display:flex;  
+    justify-content: center;
+	/* flex-direction:column; */
+    align-items:flex-strech; 
+	    }
+		
+	.box-3.1 div{
+		margin: 20px;
+		padding:20px;
+		position: relative;
+		
+	}
+	.box-4.2 {
+	 display:flex;  
+    justify-content: center;
+	/* flex-direction:column; */
+    align-items:flex-strech; 
+	position: absolute;
+	
+	    }
+		
+	.box-4.2 div{
+		margin: 20px;
+		padding:20px;
+		position: absolute;
+		
+	}
 
 }
+
+
   
     
  /*  .container-2-box{
@@ -281,6 +343,7 @@ a {
  #map {
 	 height: 400px;
 	 width: 90%;
+	 position: relative;
   }
   
   /* form */
