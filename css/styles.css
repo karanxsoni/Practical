@@ -1,4 +1,59 @@
 /* GLOBAL AND MOBILE STYLES FIRST */
+/* Portfolio Images */
+
+figure {
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  margin: 5px;
+  width:auto;
+  justify-content: center;
+  align-items: center;
+}
+
+img:hover {
+	-webkit-filter: blur(2px) brightness(40%);
+	filter: blur(2px) brightness(40%);
+} 
+
+figcaption {
+  position: absolute;
+  font-family: verdana;
+  font-size: 20pt;
+  color: white;
+  /* padding: 125px 5px; */
+  opacity: 0;
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition:    all 1s ease-in-out;
+  -o-transition:      all 1s ease-in-out;
+}
+figure:hover figcaption {
+  opacity: 1;
+}
+figure:before {
+  content: "?";
+  position: absolute;
+  align-items: left;
+  justify-content: left;
+  font-weight: 1800;
+  background: black;
+  background: rgba(255,255,255,0.75);
+  text-shadow: 0 0 5px white;
+  color: black;
+  width: 20px;
+  height: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius:    20px;
+  border-radius:         20px;
+  text-align: center;
+  font-size: 14px;
+  line-height: 24px;
+  -moz-transition: all 1s ease-in-out;
+  opacity: 0.85;
+}
+figure:hover:before {
+  opacity: 0;
+}
 
 /* cloud background */
 
@@ -11,25 +66,25 @@
   overflow: hidden;
 }
 
-.testimg {
+/* .testimg {
 	width: 150px;
+	height: 150px;
 	position: relative;
-	/* cursor: pointer; */
+	cursor: pointer;
 	-webkit-transition: 0.3s ease-in-out;
-	-webkit-transform 0.3s ease-in-out;
-	-moz-transition:0.3s ease-in-out, -moz-transform 0.3s ease-in-out;
-	transition:0.3s ease-in-out;
-	transform 0.3s ease-in-out;
+	-webkit-transform: 0.3s ease-in-out;
+	-moz-transition: 0.3s ease-in-out; 
+	-moz-transform: 0.3s ease-in-out;
+	transition: 0.3s ease-in-out;
+	transform: 0.3s ease-in-out;
 		}
 
-.testimg:hover {
-	transform: scale (1.2);
-}
+.container-3:hover img{
+	transform: scale (2);
+	transition: all 1s ease-in-out;
+} */
 		
-		.testimg:hover {
-	transform: scale (1.2);
-}
-		
+	
 		
 		
 .clouds {
@@ -231,9 +286,10 @@ a {
 	flex-wrap: wrap;
     justify-content: center;
 	flex-direction:column;
-    align-items:flex -end;
+    align-items:center;
 	height: auto;
 	width: auto;
+	/* max-width: 1125px; */
 	position:relative;
 
 	}
@@ -242,7 +298,7 @@ a {
     display:flex;  
     justify-content: center;
 	flex-direction:column;
-    align-items:flex-strech;
+    align-items:center;
 	height: auto;
 	width: auto;
 	/* position:relative; */
@@ -375,42 +431,14 @@ a {
 /* When moving the mouse over the submit button, add a darker green color */
 #submit:hover {
     background-color: #45a049;
-	width: 85px;
+	/* width: 85px;
 	height: 41px;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: ease-in-out; */
+	-webkit-filter: blur(0.5px) brightness(75%);
+	filter: blur(0.5px) brightness(75%);
 }
 
-/* my work slideshow */
 
-.slideshow {
-  margin: 2em auto 1em;
-  width: 500px; /* altering this breaks the centering??? */
-  height: 400px;
-  overflow: hidden;
-  position: absolute;
-}
-
-.slideshow img {
-  position: absolute;
-  width: 500px;
-  animation: round 16s infinite;
-  opacity: 0;
-}
-
-@keyframes round {
-  25% {
-    opacity: 1;
-  }
-  40% {
-    opacity: 0;
-  }
-}
-
-img:nth-child(1) { animation-delay: 12s; }
-img:nth-child(2) { animation-delay: 8s; }
-img:nth-child(3) { animation-delay: 4s; }
-img:nth-child(4) { animation-delay: 0s; }
- 
  
  /* svg logo animation */
 
@@ -437,10 +465,11 @@ img:nth-child(4) { animation-delay: 0s; }
 	@-webkit-keyframes dash{
 		from{
 			stroke-dashoffset: 800;
+			opacity: 0;
 			}
 		to{
 			stroke-dashoffset: 0;
-			background: red;
+			opacity: 1;
 		}
 	}
 			
@@ -451,12 +480,15 @@ img:nth-child(4) { animation-delay: 0s; }
 			}
 			
 			@-webkit-keyframes dash{
-				from{
+				0%{
 					stroke-dashoffset: 800;
 					}
-				to{
+				75%{
 					stroke-dashoffset: 0;
 					}
+				100%{
+					fill: blue;
+				}
 			}
 			
 			#logo:hover .st0 {
@@ -496,6 +528,31 @@ img:nth-child(4) { animation-delay: 0s; }
 
 /* FIRST BREAKPOINT (MEDIUM SIZE) */
 @media screen and (min-width: 500px) {
+	
+	.box-3.1 {
+	 display:flex;  
+    justify-content: center;
+	flex-direction: row;
+    align-items:flex-strech; 
+	    }
+		
+	.box-3.1 div{
+		margin: 20px;
+		padding:20px;
+		position: relative;
+		
+	}
+	
+	figure {
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  margin: 5px;
+  width:auto;
+  justify-content: space-around;
+  align-items: space-around;
+}
+	
 	
 	svg{ width: 400px;}
 	
