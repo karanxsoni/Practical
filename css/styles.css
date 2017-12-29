@@ -1,61 +1,200 @@
 /* GLOBAL AND MOBILE STYLES FIRST */
-/* Portfolio Images */
 
-figure {
+.container-3 {
   display: flex;
-  position: relative;
-  overflow: hidden;
-  margin: 5px;
-  width:auto;
-  justify-content: center;
+  flex-wrap: wrap;
   align-items: center;
+  justify-content: space-around;
+  flex-direction: row;
+ }
+
+.item {
+  height: 190px;
+  width: 190px;
+  margin: 5px;
+  padding: 15px;
 }
 
-img:hover {
-	-webkit-filter: blur(2px) brightness(40%);
-	filter: blur(2px) brightness(40%);
-	transition: all 0.5s ease-in-out;
-} 
+.outsidebox {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 50px;
+	
+}
 
-figcaption {
-  position: absolute;
-  font-family: verdana;
-  font-size: 20pt;
-  color: white;
-  overflow: hidden;
-  /* padding: 125px 5px; */
-  opacity: 0;
-  -webkit-transition: all 1s ease-in-out;
-  -moz-transition:    all 1s ease-in-out;
-  -o-transition:      all 1s ease-in-out;
+.trigger {
+	display: flex;
+	position: relative;
+	width: 100px;
+	height: 100px;
+	border: 10px solid #999;
+	background: #ddd;
 }
-figure:hover figcaption {
-  opacity: 1;
+.movebox{
+	display: flex;
+	position:relative;
+	background: orange;
+	width: 100px;
+	height: 100px;
+	transition: transform 300ms ease-in-out;
+	
 }
-figure:before {
-  content: "?";
-  position: absolute;
-  font-weight: 900;
-  background: black;
-  background: rgba(255,255,255,0.75);
-  text-shadow: 0 0 5px white;
-  color: black;
-  width: 20px;
-  height: 20px;
-  -webkit-border-radius: 20px;
-  -moz-border-radius:    20px;
-  border-radius:         20px;
+
+.trigger:hover .box{
+	transform: translate (200px, 150px) rotate (20deg);
+	
+}
+
+.box {
+	display: flex;
+	background: grey;
+	width: 50px;
+	height: 50px;
+	position: relative;
+	animation: standout 3s	ease-in-out 0s infinite;
+	margin: 5px;
+}
+
+.box1 {
+	display: flex;
+	background: grey;
+	width: 50px;
+	height: 50px;
+	position: relative;
+	animation: blendin 3s ease-in-out 0s infinite;
+	}
+	
+	.box3 {
+	display: flex;
+	background: grey;
+	width: 50px;
+	height: 50px;
+	position: relative;
+	animation: blendin 3s ease-in-out 0s infinite;
+	}
+
+@-webkit-keyframes standout{
+		
+	0% {
+	  height: 50px;
+	  
+		}
+		
+	0% {
+		height: 50px;
+		width: 50px;
+	}
+
+  50% {
+	  /* height: 62.5px;
+	  width: 62.5px; */
+	  background: orange;
+	  border-radius: 40px;
+	  }
+	  
+	  100% {
+		height: 50px;
+		width: 50px;
+	}
+	  
+}
+
+@-webkit-keyframes blendin{
+		
+	0% {
+	  height: 50px;
+	  
+		}
+		
+	0% {
+		height: 50px;
+		width: 50px;
+	}
+
+  50% {
+	  height: 35px;
+	  width: 35px;
+	 opacity: 0.75;
+	  }
+	  
+	  100% {
+		height: 50px;
+		width: 50px;
+	}
+	  
+}
+
+.boxes {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+}
+
+
+.layout {
+		display:flex;
+		flex-direction: column;
+}
+body {
+  margin:20px;
+  padding:10px;
+  background: white;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
   text-align: center;
-  font-size: 14px;
-  line-height: 24px;
-  -moz-transition: all 1s ease-in-out;
-  opacity: 0.85;
+  
+  
 }
-figure:hover:before {
-  opacity: 0;
+h1, h2, h3 {
+  font-size: 1.5em;
+  margin: 0;
+  padding: 1em;
+  font-family: helvetica;
+  text-align: center
 }
 
-/* cloud background */
+p {
+	
+	font-family: verdana
+}
+
+
+/* navigation */
+
+nav {
+  background: white;
+  display: none;
+  
+  }
+nav a {
+  padding: 1em;
+  display: block;
+
+  
+}
+#menu {
+  padding: 1em;
+  display: inline-block;
+  width: 35px;
+  
+}
+.show-menu {
+  display: block;
+ 
+  
+  }
+  
+a {
+	 color: black;
+  text-decoration: none;
+  font-family:verdana;
+}
+	
+	
+	
+/* splash animation */
 
 .background {
 	width: 100%;
@@ -145,257 +284,13 @@ opacity: 0;
 }
 
 
-
-body {
-  margin:20px;
-  padding:10px;
-  background: white;
-  overflow-y: scroll;
-  scroll-behavior: smooth;
-  text-align: center;
-  
-  
-}
-h1, h2, h3 {
-  font-size: 1.5em;
-  margin: 0;
-  padding: 1em;
-  font-family: helvetica;
-  text-align: center
-}
-
-p {
-	
-	font-family: verdana
-}
-
-
 .logo{
 	padding-top: 1em;
 }
 
-nav {
-  background: white;
-  display: none;
-  
-  }
-nav a {
-  padding: 1em;
-  display: block;
-
-  
-}
-#menu {
-  padding: 1em;
-  display: inline-block;
-  width: 35px;
-  
-}
-.show-menu {
-  display: block;
- 
-  
-  }
-  
-a {
-  color: black;
-  text-decoration: none;
-  font-family:verdana;
-}
-
-.container-1{
-    display:flex;
-	justify-content: space-around;
-	flex-direction:column;
-    align-items:center;
-	height: 650px;
-	width: auto;
-	position:relative;
-
-	  /*   
-      align-items:flex-end;
-      align-items:center;
-	  test
-	  
-           
-      */
-    }
-    
-.container-2{
-    display:flex;  
-	justify-content: center;
-	flex-direction:column;
-    align-items:center;
-	height: auto;
-	width: auto;
-	position:relative;
-			}
-  
-  .box-2.2{
-	margin: 30px;
-	padding: 30px;
-	position:relative;
-  }
-  
-.container-3{
-    display:flex;  
-	flex-wrap: wrap;
-    justify-content: center;
-	flex-direction:column;
-    align-items:center;
-	height: auto;
-	width: auto;
-	/* max-width: 1125px; */
-	position:relative;
-
-	}
-	
-	.container-4{
-    display:flex;  
-    justify-content: center;
-	flex-direction:column;
-    align-items:center;
-	height: auto;
-	width: auto;
-	/* position:relative; */
-
-	}
-  
-  .container-1 div, .container-2 div, .container-3 div{
-    /* border:1px #ccc solid; */
-    padding:10px;
-	/* margin:25px; */
-	height:100%;
-	width:100%;
-	position: relative;
-	
-  }
-  
-.container-4 div{
-	
-    /* border:1px #ccc solid; */
-   /*  padding:5px; */
-	margin-bottom:15px;
-	height:auto;
-	width:auto;
-	position: relative;
-  }
-  
-  .box-4.1 {
-	 display:flex;  
-    justify-content: center;
-	/* flex-direction:column; */
-    align-items:flex-strech; 
-	position: relative;
-	
-	    }
-		
-	.box-4.1 div{
-		margin: 20px;
-		padding:20px;
-		position: relative;
-		
-	}
-		
-  .box-3.1 {
-	 display:flex;  
-    justify-content: center;
-	/* flex-direction:column; */
-    align-items:flex-strech; 
-	    }
-		
-	.box-3.1 div{
-		margin: 20px;
-		padding:20px;
-		position: relative;
-		
-	}
-	.box-4.2 {
-	 display:flex;  
-    justify-content: center;
-	/* flex-direction:column; */
-    align-items:flex-strech; 
-	position: absolute;
-	
-	    }
-		
-	.box-4.2 div{
-		margin: 20px;
-		padding:20px;
-		position: absolute;
-		
-	}
-
-}
 
 
-  
-    
- /*  .container-2-box{
-    flex-basis: 25%;  
-  }
-  
-  .container-3-box{
-    flex-basis:25%;
-  } */
-
-.top {
-  display: block;
-  text-align: right;
-  line-height: 1.75em;
-  padding-right: 0.5em;
-}
-.top:hover {
-  background: rgba(200,200,200,0.96);
-  color: #fff;
-  
- }
- 
- #map {
-	 height: 400px;
-	 width: 90%;
-	 position: relative;
-  }
-  
-  /* form */
-  
-  input[type=text], select, textarea {
-	width: 50%; /* Full width */
-    padding: 12px; /* Some padding */  
-    border: 1px solid #ccc; /* Gray border */
-    border-radius: 15px; /* Rounded borders */
-    box-sizing: border-box; /* Make sure that padding and width stays in place */
-    margin-top: 5px; /* Add a top margin */
-    margin-bottom: 15px; /* Bottom margin */
-    resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
-	
-}
-
-/* Style the submit button with a specific background color etc */
-#submit{
-    background-color: #4CAF50;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 15px;
-    cursor: pointer;
-	width: 80px;
-	height: 36px;
-}
-
-/* When moving the mouse over the submit button, add a darker green color */
-#submit:hover {
-    background-color: #45a049;
-	/* width: 85px;
-	height: 41px;
-	transition-timing-function: ease-in-out; */
-	-webkit-filter: blur(0.5px) brightness(75%);
-	filter: blur(0.5px) brightness(75%);
-}
-
-
- 
- /* svg logo animation */
+ /* SVG Logo Animation */
 
   svg{ width: 200px;}
  
@@ -481,6 +376,227 @@ a {
 		}
 }	
 
+
+
+
+/*  Main Containers */
+ 
+
+.container-1{
+    display:flex;
+	justify-content: space-around;
+	flex-direction:column;
+    align-items:center;
+	height: 650px;
+	width: auto;
+	position:relative;
+
+	  /*   
+      align-items:flex-end;
+      align-items:center;
+	  test
+	  
+           
+      */
+    }
+    
+.container-2{
+    display:flex;  
+	justify-content: center;
+	flex-direction:column;
+    align-items:center;
+	height: auto;
+	width: auto;
+	position:relative;
+			}
+  
+  
+  
+
+	
+		
+	.container-4{
+    display:flex;  
+    justify-content: center;
+	flex-direction:column;
+    align-items:center;
+	height: auto;
+	width: auto;
+	/* position:relative; */
+
+	}
+  
+  .container-1 div, .container-2 div{
+    /* border:1px #ccc solid; */
+    padding:10px;
+	/* margin:25px; */
+	height:100%;
+	width:100%;
+	position: relative;
+	
+  }
+  
+.container-4 div{
+	
+    /* border:1px #ccc solid; */
+   /*  padding:5px; */
+	margin-bottom:15px;
+	height:auto;
+	width:auto;
+	position: relative;
+  }
+  
+  
+  /* Sub Containers */
+  
+  .box-2.2{
+	display: flex;
+	flex-direction: row;
+	margin: 30px;
+	padding: 30px;
+	position:relative;
+	align-items: center;
+	justify-content: space-between;
+	
+  }
+  
+  /*  .box-3.1 {
+	 display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: flex-start;
+	    } */
+		
+	/* .box-3.1 div{
+		
+  width: 100%;
+  margin: 10px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+		
+	} */
+	
+	/* .media{
+		 background: red;
+  height: 190px;
+  width: 190px;
+  margin: 5px;
+		
+	} */
+	
+	/* img {
+		max-width: 25%;
+		padding: 2.5%;
+	} */
+  
+  .box-4.1 {
+	 display:flex;  
+    justify-content: center;
+	/* flex-direction:column; */
+    align-items:flex-strech; 
+	position: relative;
+	
+	    }
+		
+	.box-4.1 div{
+		margin: 20px;
+		padding:20px;
+		position: relative;
+		
+	}
+		
+ 	
+	.box-4.2 {
+	 display:flex;  
+    justify-content: center;
+	/* flex-direction:column; */
+    align-items:flex-strech; 
+	position: absolute;
+	
+	    }
+		
+	.box-4.2 div{
+		margin: 20px;
+		padding:20px;
+		position: absolute;
+		
+	}
+
+}
+
+
+    
+/* Smooth Scroll */
+
+.top {
+  display: block;
+  text-align: right;
+  line-height: 1.75em;
+  padding-right: 0.5em;
+}
+.top:hover {
+  background: rgba(200,200,200,0.96);
+  color: #fff;
+  
+ }
+ 
+
+/* Google API */
+
+ #map {
+	 height: 400px;
+	 width: 90%;
+	 position: relative;
+  }
+  
+ 
+
+ /* Form */
+  
+  
+  input[type=text], select, textarea {
+	width: 50%; /* Full width */
+    padding: 12px; /* Some padding */  
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 15px; /* Rounded borders */
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 5px; /* Add a top margin */
+    margin-bottom: 15px; /* Bottom margin */
+    resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
+	
+}
+
+/* Style the submit button with a specific background color etc */
+#submit{
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+	width: 80px;
+	height: 36px;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+#submit:hover {
+    background-color: #45a049;
+	/* width: 85px;
+	height: 41px;
+	transition-timing-function: ease-in-out; */
+	-webkit-filter: blur(0.5px) brightness(75%);
+	filter: blur(0.5px) brightness(75%);
+}
+
+
+ 
+
+
+
+
+
+
 /* FIRST BREAKPOINT (MEDIUM SIZE) */
 @media screen and (min-width: 500px) {
 	
@@ -554,4 +670,5 @@ opacity: 0;
   
 }
 /* END SECOND BREAKPOINT */
+
 
